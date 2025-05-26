@@ -1,0 +1,31 @@
+# How to Use Assets in This Module
+
+All files placed in this folder are publicly accessible via the following URL structure:
+
+/assets/modules/Users/
+
+For example:
+- If you place a file named `script.js` in the `js` subfolder, you can include it in your HTML like this:
+  ```html
+  <script src="/assets/modules/Users/js/script.js"></script>
+  ```
+
+- If you add a file named `styles.css` in the `css` subfolder, you can link it like this:
+  ```html
+  <link rel="stylesheet" href="/assets/modules/Users/css/styles.css">
+  ```
+
+- If you include an image named `banner.jpg` in the `images` subfolder, you can use it as follows:
+  ```html
+  <img src="/assets/modules/Users/images/banner.jpg" alt="Banner">
+  ```
+
+- If you place a font file named `myfont.woff2` in the `fonts` subfolder, you can reference it in your CSS like this:
+  ```html
+  <style>
+    @font-face {
+      font-family: 'MyFont';
+      src: url('/assets/modules/Users/fonts/myfont.woff2') format('woff2');
+    }
+  </style>
+  ```
