@@ -32,9 +32,9 @@
 
         private static function seoVar() {
             $seo = [];
-            $seo['title'] = "DotBridge Example: Seamless Backend-to-Frontend Integration with DotApp Framework";
-            $seo['description'] = "This example showcases how to use DotBridge in the DotApp Framework to effortlessly connect PHP backend with JavaScript frontend using secure AJAX requests. Learn how to implement simple tags like {{ dotbridge:on(click) }} for dynamic, secure, and efficient form handling.";
-            $seo['keywords'] = "DotBridge, DotApp Framework, secure AJAX, PHP JavaScript integration, dynamic forms, dotapp.js, secure communication, template tags, backend frontend bridge";
+            $seo['title'] = "DotApp Example: Advanced User Authentication with 2FA and QR Codes";
+            $seo['description'] = "Explore how to build a secure user authentication module in the DotApp PHP framework, featuring registration, login, two-factor authentication (2FA) with QR codes and email, and a reusable module design for easy integration across projects.";
+            $seo['keywords'] = "DotApp framework, user authentication, two-factor authentication, 2FA, QR codes, PHP module, reusable module, secure login, registration, middleware, DotApp philosophy";
             return $seo;
        }
         
@@ -75,7 +75,7 @@
                             // $data['username'] = 'admin'; // - Toto nepouzivame kedze my sa prihalsujeme emailom v tomto priklade
                             $data['email'] = $email;
                             $data['password'] = $request->data(true)['data']['password'];
-                            $login = Auth::login($data,Module::getStatic("autologin"));
+                            $login = Auth::login($data,Module::getStatic("autologin"),);
                             if ($login['logged'] == true) {
                                 $body = [];
                                 if (Auth::loggedStage() == 2) {
